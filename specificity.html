@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* specificity 0,1,0,0 = 100 */
+
+      #page-header {
+        background-color: lightblue;
+        width: 100%;
+      }
+
+      /* specificity 0,0,1,0 = 10 */
+
+      .menu-item {
+        background-color: white;
+        color: darkblue;
+      }
+
+      /* specificity 0,0,1,1 = 11 */
+
+      .menu-item a {
+        text-decoration: none;
+      }
+
+      /* specificity 0,0,1,2 = 12 */
+
+      header .menu-item a {
+        text-decoration: none;
+      }
+
+      /* specificity: 0,0,1,2 =12 */
+      div.navigation li {
+        color: blue;
+      }
+
+      /* specificity 0,0,1,1 = 11 */
+      .navigation li {
+        color: red;
+      }
+
+      /* specificity 0,0,1,1 =  11*/
+
+      .menu li {
+      }
+
+      /* specificity 0,0,1,2 =  12 */
+
+      .navigation nav li {
+      }
+
+      /* specificity 0,0,2,1 = 21*/
+
+      .navigation .menu li {
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="page-header">
+      <nav class="navigation">
+        <ul class="menu">
+          <li class="menu-item"><a href="#">Menu 1</a></li>
+          <li class="menu-item"><a href="#">Menu 2</a></li>
+          <li class="menu-item"><a href="#">Menu 3</a></li>
+          <li class="menu-item"><a href="#">Menu 4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <p style="color:red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam natus eum
+        nam temporibus impedit, incidunt ipsa magnam tempore doloremque
+        necessitatibus recusandae officiis sapiente dignissimos placeat nulla,
+        quia culpa nobis laudantium.
+      </p>
+    </main>
+  </body>
+</html>

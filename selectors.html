@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Selectors</title>
+  <style>
+  
+
+  /* basic selectors */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+  }
+
+  h1 {
+    color: darkslategray;
+  }  
+
+/* class selector */
+  h2.sub-titles {
+    color: darkcyan;
+  }
+
+  #attr-selectors {
+    list-style: none;
+  }
+
+  #attr-selectors li {
+    display: inline-block;
+    background-color: lightblue;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* Attribute selectors */
+li[data-item="active"] {
+  text-decoration: underline;
+}
+
+
+  /* descendant selector */
+  ul li {
+    color:chocolate;
+  }
+  
+  /* direct child */
+  ol > li {
+
+    color: green;
+
+  }
+
+/* adjacent sibling */
+  .list-item + li {
+    font-weight: bold;
+    color:orange
+  }
+
+/* attribute selector & :checked pseudo-class & adjacent sibling selector */
+
+  input[type="checkbox"]:checked + label {
+    background-color: red;
+    color: white;
+  }
+
+  </style>
+</head>
+<body>
+  <h1>Selectors</h1>
+
+
+  <h2 class="sub-titles">Basic Selectors</h2>
+
+  <h2 class="sub-titles">Attribute Selectors</h2>
+
+  <p>Based on the attributes of the element:</p>
+
+    <ul id="attr-selectors">
+      <li data-item="active">ID</li>
+      <li>Class</li>
+      <li>Other attributes</li>
+    </ul>
+
+
+  <h2 class="sub-titles">Relational Selectors and Combinators</h2>
+
+
+  <ol>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3
+      <ul>
+        <li>item a</li>
+        <li>item b</li>
+        <li>item c</li>
+      </ul>
+    </li>
+    <li class="list-item">item 4 - list-item class</li>
+    <li>item 5</li>
+    <li>item 6</li>
+    <li>item 7</li>
+  </ol>
+
+
+  <form action="">
+    <div>
+    <input id="canada" type="checkbox" value="Canada">
+    <label for="canada">Canada</label>
+  </div>
+  <div>
+    <input type="checkbox" value="US">
+    <label for="us">US</label>
+  </div>
+  <div>
+    <input type="checkbox" value="UK">
+    <label for="uk">UK</label>
+  </div>
+  </form>
+
+</body>
+</html>

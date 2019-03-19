@@ -6,6 +6,12 @@
 2. internal element
 3. external stylesheet
 
+## CSS Layout
+
+- Float
+- CSS positioning
+- Flexbox
+
 ## Selectors
 
 Selectors target which elements on our page will be styled
@@ -52,14 +58,14 @@ iii. external style sheets
 
 ### II. Specificity
 
-Each selector of a style declaration has a calculated specificty.
+Each selector of a style declaration has a calculated specificity.
 
 a= presence of an inline style
 b= calculate the number of ID attributes in the selector
 c= calculate the number of classes, pseudo-classes and other attributes in the selector
 d= calculate the number of element names in the selector
 
-a*100, b*10, c\*1
+a*1000, b*100, c*10, d*1
 
 - has a 0 specificity
 
@@ -84,9 +90,10 @@ color: blue;
 <p id = "quote">This will be red</p>
 
 References:
-[When Using !important is The Right Choice](https://css-tricks.com/when-using-important-is-the-right-choice/)
-[css specificity](https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/)
-[Specifics on CSS Specificity](https://css-tricks.com/specifics-on-css-specificity/)
-[CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors)
-[Users Style Sheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/)
-https://appendto.com/2016/04/css-important-rule-how-to-use-it-correctly/
+
+- [When Using !important is The Right Choice](https://css-tricks.com/when-using-important-is-the-right-choice/)
+- [css specificity](https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/)
+- [Specifics on CSS Specificity](https://css-tricks.com/specifics-on-css-specificity/)
+- [CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors)
+- [Users Style Sheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/)
+  https://appendto.com/2016/04/css-important-rule-how-to-use-it-correctly/

@@ -6,54 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-      /* specificity 0,1,0,0 = 100 */
+      /* 1,0,0  = 100 */
 
       #page-header {
         background-color: lightblue;
         width: 100%;
       }
 
-      /* specificity 0,0,1,0 = 10 */
-
+      /* 0,1,0  = 10 */
       .menu-item {
         background-color: white;
         color: darkblue;
       }
 
-      /* specificity 0,0,1,1 = 11 */
-
+      /* 0,1,1  = 11 */
       .menu-item a {
         text-decoration: none;
       }
 
-      /* specificity 0,0,1,2 = 12 */
-
+      /* 0,1,2 = 12 */
       header .menu-item a {
         text-decoration: none;
       }
 
-      /* specificity: 0,0,1,2 =12 */
+      /* 0,1,2 = 12 */
       div.navigation li {
         color: blue;
       }
 
-      /* specificity 0,0,1,1 = 11 */
+      /* 0,1,1 = 11 */
       .navigation li {
         color: red;
       }
 
-      /* specificity 0,0,1,1 =  11*/
-
+      /* 0,1,1 = 11 */
       .menu li {
+        color: white;
       }
 
-      /* specificity 0,0,1,2 =  12 */
-
+      /* 0,1,2 = 12 */
       .navigation nav li {
       }
 
-      /* specificity 0,0,2,1 = 21*/
-
+      /* 0,2,1  = 21*/
       .navigation .menu li {
       }
     </style>

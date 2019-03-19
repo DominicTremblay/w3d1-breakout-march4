@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      .clearfix::after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+
+      body * {
+        border: 1px dashed lightsteelblue;
+      }
+
+      header {
+        background-color: lightcoral;
+      }
+
+      .logo {
+        float: left;
+      }
+
+      ul {
+        float: right;
+        margin: 0;
+      }
+
+      li {
+        float: left;
+        list-style: none;
+        margin-left: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="clearfix">
+      <div class="logo clearfix">
+        Logo
+      </div>
+      <nav>
+        <ul>
+          <li>item1</li>
+          <li>item2</li>
+          <li>item3</li>
+          <li>item4</li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

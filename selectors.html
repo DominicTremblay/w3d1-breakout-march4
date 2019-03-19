@@ -1,123 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Selectors</title>
-  <style>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
 
-  /* basic selectors */
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-  }
+    <style>
+      /* basic selectors */
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        color: mediumaquamarine;
+      }
 
-  h1 {
-    color: darkslategray;
-  }  
+      h2 {
+        color: mediumslateblue;
+      }
 
-/* class selector */
-  h2.sub-titles {
-    color: darkcyan;
-  }
+      .class-selector {
+        color: mediumturquoise;
+      }
 
-  #attr-selectors {
-    list-style: none;
-  }
+      #id-selector-list {
+        background-color: lightgray;
+      }
 
-  #attr-selectors li {
-    display: inline-block;
-    background-color: lightblue;
-    padding: 15px;
-    border-radius: 5px 5px 0 0;
-  }
+      input[type='text'] {
+        border: 2px solid salmon;
+      }
 
-  /* Attribute selectors */
-li[data-item="active"] {
-  text-decoration: underline;
-}
+      li[data-item='active'] {
+        background-color: aquamarine;
+        padding: 0.2em;
+      }
 
+      li[data-item='active'] + li {
+        border: 2px solid lightsalmon;
+      }
 
-  /* descendant selector */
-  ul li {
-    color:chocolate;
-  }
-  
-  /* direct child */
-  ol > li {
+      input[type='checkbox']:checked + label {
+        background-color: goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Selectors</h1>
 
-    color: green;
+    <h2>Basic Selector</h2>
 
-  }
-
-/* adjacent sibling */
-  .list-item + li {
-    font-weight: bold;
-    color:orange
-  }
-
-/* attribute selector & :checked pseudo-class & adjacent sibling selector */
-
-  input[type="checkbox"]:checked + label {
-    background-color: red;
-    color: white;
-  }
-
-  </style>
-</head>
-<body>
-  <h1>Selectors</h1>
-
-
-  <h2 class="sub-titles">Basic Selectors</h2>
-
-  <h2 class="sub-titles">Attribute Selectors</h2>
-
-  <p>Based on the attributes of the element:</p>
-
-    <ul id="attr-selectors">
-      <li data-item="active">ID</li>
-      <li>Class</li>
-      <li>Other attributes</li>
+    <ul>
+      <li>Any HTML tag</li>
     </ul>
 
+    <h2 class="class-selector">Class Selector</h2>
 
-  <h2 class="sub-titles">Relational Selectors and Combinators</h2>
+    <ul class="class-selector">
+      <li>class selector can be applied to any HTML element</li>
+    </ul>
 
+    <h2>ID Selector</h2>
 
-  <ol>
-    <li>item 1</li>
-    <li>item 2</li>
-    <li>item 3
-      <ul>
-        <li>item a</li>
-        <li>item b</li>
-        <li>item c</li>
-      </ul>
-    </li>
-    <li class="list-item">item 4 - list-item class</li>
-    <li>item 5</li>
-    <li>item 6</li>
-    <li>item 7</li>
-  </ol>
+    <ul id="id-selector-list">
+      <li>The same id should be used only once per document</li>
+    </ul>
 
+    <h2 id="id-selector-list">Attribute Selectors</h2>
 
-  <form action="">
-    <div>
-    <input id="canada" type="checkbox" value="Canada">
-    <label for="canada">Canada</label>
-  </div>
-  <div>
-    <input type="checkbox" value="US">
-    <label for="us">US</label>
-  </div>
-  <div>
-    <input type="checkbox" value="UK">
-    <label for="uk">UK</label>
-  </div>
-  </form>
+    <form>
+      <input type="text" name="email" id="email" />
+      <input type="text" name="password" id="password" />
 
-</body>
+      <input type="submit" value="Send" />
+    </form>
+
+    <h2>Relational Selectors and Combinators</h2>
+
+    <ol>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li data-item="active">item4</li>
+      <li>item5</li>
+      <li>item6</li>
+      <li>item7</li>
+    </ol>
+
+    <form>
+      <input type="checkbox" name="canada" id="canada" />
+      <label for="canada">Canada</label>
+
+      <input type="checkbox" name="us" id="us" />
+      <label for="us">US</label>
+
+      <input type="checkbox" name="uk" id="uk" />
+      <label for="uk">UK</label>
+    </form>
+  </body>
 </html>
